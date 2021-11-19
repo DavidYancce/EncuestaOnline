@@ -1,1 +1,41 @@
-<p>login works!</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>EncuestaOnline</title>
+    <link rel="stylesheet" href="/login.component.scss">
+  </head>
+  <body>
+    <div class="Titulo">
+      <h1><b>Bienvenido al Cuestionario</b></h1>
+    </div>
+    <div class="Titulo" style="margin-right: 400px;">
+      <h2>IMPORTANTE</h2><br>
+      <P><b>Este cuestionario debe ser completado sin interrupciones</b></P><br>
+      <div style="margin-left: 480px; width: 35%; height: 100px; background-color:white;">
+        <ol  style="margin-left: 20px; font-size: 15px;">
+          <li type="disc">Está diseñado para ser completado en 30 minutos o menos</li>
+          <li type="disc">Es muy importante que te concentres</li>
+          <li type="disc">Busca un lugar sin distracciones (tu casa por la noche)</li>
+          <li type="disc">Responde con honestidad y sin exagerar</li>
+          <li type="disc">Si dejas la pantalla inactiva por 15 minutos, la sesión caducará</li>
+        </ol>
+      </div>
+    </div>
+    <div class="login-box" style="margin-left: 520px; margin-top: 30px">
+      <h2>Acceso</h2>
+      <p>Debe ingresar con el usuario y clave que <br> le fueron enviados a su correo electrónico</p>
+      <form>
+        <!-- USERNAME INPUT -->
+        <label for="username">Usuario</label>
+        <input type="text" placeholder="Enter Username">
+        <!-- PASSWORD INPUT -->
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter Password">
+        <input type="submit" value="Ingresar"><br>
+        <a href="#" style="color: red;">¿No puede ingresar?</a>
+        <p style="font-size: 4;">Si necesita ayuda, comuniquese con nosotros al Whatsapp 999432111.<br>Lo atenderemos lo mas pronto posible</p>
+      </form>
+    </div>
+  </body>
+</html>
