@@ -1,0 +1,20 @@
+.container {
+    background-color: #121212;
+    color:white;
+}
+.parrafo{
+    text-align:center; 
+    font-size:14px; 
+    margin-top: 12px;
+}
+.parrafo-titulo {
+    text-align:center; 
+    font-size:18px; 
+    margin-top: 10px;
+}
+li {
+    list-style:none
+}
+mat-list-option[aria-selected="true"] {
+    background: rgba(0, 139, 139, 0.7);
+  }

@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CuestionarioComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    
+   }
 
   ngOnInit(): void {
+    
   }
-
+  palabras: string[] = ['Etica', 'Meticulosa', 'Ansiosa', 'Racional', 'Entretenida','Fuerte'];
+  
 }

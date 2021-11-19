@@ -1,3 +1,126 @@
-<p>cuestionario works!</p>
-esto es un cuestionario
+<div class="container" style="height:100vh">
+    <!-- <p>cuestionario works!</p>
+    esto es un cuestionario
 
+    <p>
+        <mat-form-field appearance="legacy">
+            <mat-label>Legacy form field</mat-label>
+            <input matInput placeholder="Placeholder">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+    </p> -->
+    <div style="text-align:center; font-size:18px; padding-top:15px ;"> Cuestionario </div>
+    <div style="text-align:center; font-size:18px; margin-top: 15px;"> Seccion 1: Descripion personal </div>
+
+    <mat-tab-group animationDuration="0ms">
+        <mat-tab label="Auto descripcion">
+            <div style="text-align:center; font-size:18px; margin-top: 15px;"> Intrucciones
+                <ul>
+                    <li>
+                        En un maximo de 2 o 3 linea describete a ti mismo con tus propias palabras
+                    </li>
+                    <li>Puede ser desde el aspecto personal, familiar, profesional, laboral, etc</li>
+                    <li>Las personas suelen empezar diciendo: "Me considero una persona..."</li>
+                    <li>Es muy importante que seas espontaneo y respondas con total sinceridad</li>
+                </ul>
+            </div>
+            <textarea rows="20" cols="120" placeholder="Escriba aqui su autodescripcion" value=""
+                style="margin-left: 200px;"></textarea>
+        </mat-tab>
+        <mat-tab label="La gente dice">
+            <div class="padre" style="display: flex">
+                <div style="width:20%">
+                    <div class="parrafo-titulo" style="margin-top: 20%;"> Intrucciones </div>
+                    <div class="parrafo">
+                        Marque solo las palabras que correspondan
+                    </div>
+                    <div class="parrafo">
+                        No exageres o trates de magnificar tus respuestas
+                    </div>
+                    <div class="parrafo">
+                        Si esto sucede, se invalidara el test y te pediremos que lo respondas otra vez
+                    </div>
+                </div>
+                <div style="width:80%; border:1px solid white;margin:20px;display:flex">
+                    <div style="width:25%">
+                        <mat-selection-list>
+                            <mat-list-option *ngFor="let palabra of palabras; let indice = index">
+                                {{palabra}}
+                            </mat-list-option>
+                        </mat-selection-list>
+                    </div>
+                    <div style="width:25%">
+                        <mat-selection-list>
+                            <mat-list-option *ngFor="let palabra of palabras; let indice = index">
+                                {{palabra}}
+                            </mat-list-option>
+                        </mat-selection-list>
+                    </div>
+                    <div style="width:25%">
+                        <mat-selection-list>
+                            <mat-list-option *ngFor="let palabra of palabras; let indice = index">
+                                {{palabra}}
+                            </mat-list-option>
+                        </mat-selection-list>
+                    </div>
+                    <div style="width:25%">
+                        <mat-selection-list>
+                            <mat-list-option *ngFor="let palabra of palabras; let indice = index">
+                                {{palabra}}
+                            </mat-list-option>
+                        </mat-selection-list>
+                    </div>
+
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="Realmente soy">
+            <div class="padre" style="display: flex">
+                <div style="width:20%">
+                    <div class="parrafo-titulo" style="margin-top: 20%;"> Intrucciones </div>
+                    <div class="parrafo">
+                        Marque solo las palabras que correspondan
+                    </div>
+                    <div class="parrafo">
+                        No exageres o trates de magnificar tus respuestas
+                    </div>
+                    <div class="parrafo">
+                        Si esto sucede, se invalidara el test y te pediremos que lo respondas otra vez
+                    </div>
+                </div>
+                <div style="width:80%; border:1px solid white;margin:20px;display:flex">
+                    <div style="width:25%">
+                        <mat-selection-list>
+                            <mat-list-option *ngFor="let palabra of palabras; let indice = index">
+                                {{palabra}}
+                            </mat-list-option>
+                        </mat-selection-list>
+                    </div>
+                    <div style="width:25%">
+                        <mat-selection-list>
+                            <mat-list-option *ngFor="let palabra of palabras; let indice = index">
+                                {{palabra}}
+                            </mat-list-option>
+                        </mat-selection-list>
+                    </div>
+                    <div style="width:25%">
+                        <mat-selection-list>
+                            <mat-list-option *ngFor="let palabra of palabras; let indice = index">
+                                {{palabra}}
+                            </mat-list-option>
+                        </mat-selection-list>
+                    </div>
+                    <div style="width:25%">
+                        <mat-selection-list>
+                            <mat-list-option *ngFor="let palabra of palabras; let indice = index">
+                                {{palabra}}
+                            </mat-list-option>
+                        </mat-selection-list>
+                    </div>
+
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>

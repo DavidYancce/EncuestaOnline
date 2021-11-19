@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { AppCommonsModule } from './commons/commons.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CuestionarioComponent } from './encuesta/cuestionario/cuestionario.component';
@@ -18,6 +19,7 @@ import { LoginComponent } from './encuesta/login/login.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AppCommonsModule,
     BrowserAnimationsModule
   ],
   providers: [],
