@@ -44,10 +44,11 @@
                     </div>
                 </div>
                 <div class="contenedor-palabras">
+                    
                     <div style="width:25%" *ngFor="let palabra of palabras; let indice = index">
                         
-                        <mat-selection-list > 
-                            <mat-list-option >
+                        <mat-selection-list #list  (selectionChange)="onGroupsChange(list.selectedOptions.selected)"> 
+                            <mat-list-option [value]="indice">
                                 {{palabra}}
                             </mat-list-option>
                         </mat-selection-list> 
