@@ -11,5 +11,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  validar(){
+    window.location.href = "/cuestionario";
+  }
 }

@@ -20,7 +20,7 @@ export class CuestionarioComponent implements OnInit {
       }
     });
   }
-  palabras: string[] = ['opcion 1', 'opcode 2'];
+  palabras: string[] = [];
   palabrasSeleccionadas: any[] = [];
 
   onGroupsChange(options: MatListOption[]) {
