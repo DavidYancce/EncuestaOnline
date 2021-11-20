@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\encuesta-online",
+    "\\encuesta-online\\src",
+    "\\encuesta-online\\src\\app",
+    "\\encuesta-online\\src\\app\\encuesta",
+    "\\encuesta-online\\src\\app\\encuesta\\login"
+  ],
+  "SelectedNode": "\\encuesta-online\\src\\app\\encuesta\\login\\login.component.html",
+  "PreviewInSolutionExplorer": false
+}
