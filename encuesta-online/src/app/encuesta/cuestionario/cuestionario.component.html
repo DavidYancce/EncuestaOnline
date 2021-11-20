@@ -1,4 +1,4 @@
-<div class="container" style="height:100vh">
+<div class="container" >
     <!-- <p>cuestionario works!</p>
     esto es un cuestionario
 
@@ -25,8 +25,9 @@
                     <li>Es muy importante que seas espontaneo y respondas con total sinceridad</li>
                 </ul>
             </div>
-            <textarea rows="20" cols="120" placeholder="Escriba aqui su autodescripcion" value=""
-                style="margin-left: 200px;"></textarea>
+            
+            <textarea rows="20" cols="120" placeholder="Escriba aqui su autodescripcion" value="" style="display: block; margin-left: auto; margin-right: auto;"></textarea>
+            
         </mat-tab>
         <mat-tab label="La gente dice">
             <div class="padre" style="display: flex">
@@ -42,36 +43,15 @@
                         Si esto sucede, se invalidara el test y te pediremos que lo respondas otra vez
                     </div>
                 </div>
-                <div style="width:80%; border:1px solid white;margin:20px;display:flex">
-                    <div style="width:25%">
-                        <mat-selection-list>
-                            <mat-list-option *ngFor="let palabra of palabras; let indice = index">
+                <div class="contenedor-palabras">
+                    <div style="width:25%" *ngFor="let palabra of palabras; let indice = index">
+                        
+                        <mat-selection-list > 
+                            <mat-list-option >
                                 {{palabra}}
                             </mat-list-option>
-                        </mat-selection-list>
+                        </mat-selection-list> 
                     </div>
-                    <div style="width:25%">
-                        <mat-selection-list>
-                            <mat-list-option *ngFor="let palabra of palabras; let indice = index">
-                                {{palabra}}
-                            </mat-list-option>
-                        </mat-selection-list>
-                    </div>
-                    <div style="width:25%">
-                        <mat-selection-list>
-                            <mat-list-option *ngFor="let palabra of palabras; let indice = index">
-                                {{palabra}}
-                            </mat-list-option>
-                        </mat-selection-list>
-                    </div>
-                    <div style="width:25%">
-                        <mat-selection-list>
-                            <mat-list-option *ngFor="let palabra of palabras; let indice = index">
-                                {{palabra}}
-                            </mat-list-option>
-                        </mat-selection-list>
-                    </div>
-
                 </div>
             </div>
         </mat-tab>
@@ -89,36 +69,15 @@
                         Si esto sucede, se invalidara el test y te pediremos que lo respondas otra vez
                     </div>
                 </div>
-                <div style="width:80%; border:1px solid white;margin:20px;display:flex">
-                    <div style="width:25%">
-                        <mat-selection-list>
-                            <mat-list-option *ngFor="let palabra of palabras; let indice = index">
+                <div class="contenedor-palabras">
+                    <div style="width:25%" *ngFor="let palabra of palabras; let indice = index">
+                        
+                        <mat-selection-list > 
+                            <mat-list-option >
                                 {{palabra}}
                             </mat-list-option>
-                        </mat-selection-list>
+                        </mat-selection-list> 
                     </div>
-                    <div style="width:25%">
-                        <mat-selection-list>
-                            <mat-list-option *ngFor="let palabra of palabras; let indice = index">
-                                {{palabra}}
-                            </mat-list-option>
-                        </mat-selection-list>
-                    </div>
-                    <div style="width:25%">
-                        <mat-selection-list>
-                            <mat-list-option *ngFor="let palabra of palabras; let indice = index">
-                                {{palabra}}
-                            </mat-list-option>
-                        </mat-selection-list>
-                    </div>
-                    <div style="width:25%">
-                        <mat-selection-list>
-                            <mat-list-option *ngFor="let palabra of palabras; let indice = index">
-                                {{palabra}}
-                            </mat-list-option>
-                        </mat-selection-list>
-                    </div>
-
                 </div>
             </div>
         </mat-tab>
