@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppCommonsModule } from './commons/commons.module';
@@ -20,7 +21,8 @@ import { LoginComponent } from './encuesta/login/login.component';
     BrowserModule,
     AppRoutingModule,
     AppCommonsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

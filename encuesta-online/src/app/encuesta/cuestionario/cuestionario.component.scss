@@ -1,6 +1,7 @@
 .container {
     background-color: #121212;
-    color:white;
+    color:#EEEEEE;
+    min-height: 100vh;
 }
 .parrafo{
     text-align:center; 
@@ -18,3 +19,10 @@ li {
 mat-list-option[aria-selected="true"] {
     background: rgba(0, 139, 139, 0.7);
   }
+.contenedor-palabras{
+    width:80%;
+    border:1px solid white;
+    margin:20px;
+    display:flex;
+    flex-wrap: wrap;
+}
