@@ -5,8 +5,9 @@
     "\\encuesta-online\\src",
     "\\encuesta-online\\src\\app",
     "\\encuesta-online\\src\\app\\encuesta",
-    "\\encuesta-online\\src\\app\\encuesta\\login"
+    "\\encuesta-online\\src\\app\\encuesta\\login",
+    "\\encuesta-online\\src\\app\\models",
+    "\\encuesta-online\\src\\app\\services"
   ],
-  "SelectedNode": "\\encuesta-online\\src\\app\\encuesta\\login\\login.component.html",
   "PreviewInSolutionExplorer": false
 }
