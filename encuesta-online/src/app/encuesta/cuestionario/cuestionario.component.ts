@@ -9,27 +9,27 @@ import { ComoSoyService } from 'src/app/api/services';
 })
 export class CuestionarioComponent implements OnInit {
 
-  constructor(private comoSoyService: ComoSoyService ) {//private cuestionarioService: CuestionarioServiceService
+  constructor(private cuestionarioService: CuestionarioServiceService) {//private comoSoyService: ComoSoyService 
 
   }
 
   ngOnInit() {
 
-    // this.cuestionarioService.getcomoSoy().subscribe(data => {
-    //   for (let i = 0; i < data.length; i++) {
-    //     this.palabrasComoSoy.push(data[i])
-    //   }
-    // });
-    this.comoSoyService.apiComoSoyGet().subscribe(data=>{
-      console.log(data)
-    })
+    this.cuestionarioService.getcomoSoy().subscribe(data => {
+      for (let i = 0; i < data.length; i++) {
+        this.palabrasComoSoy.push(data[i])
+      }
+    });
+    // this.comoSoyService.apiComoSoyGet().subscribe(data=>{
+    //       console.log(data)
+    // })
 
 
-    // this.cuestionarioService.getDicenMi().subscribe(data => {
-    //   for (let i = 0; i < data.length; i++) {
-    //     this.palabrasDicenMi.push(data[i])
-    //   }
-    // });
+    this.cuestionarioService.getDicenMi().subscribe(data => {
+      for (let i = 0; i < data.length; i++) {
+        this.palabrasDicenMi.push(data[i])
+      }
+    });
   }
 
   palabrasComoSoy: any[] = [];
@@ -39,7 +39,12 @@ export class CuestionarioComponent implements OnInit {
 
   guardarComoSoy() {
     console.log("guardando");
-    console.log(this.palabrasSeleccionadasComoSoy)
+    for(var palabra of this.palabrasSeleccionadasComoSoy) {
+      this.cuestionarioService.guardarRespuestaComoSoy(palabra).subscribe(data=>{
+        console.log(data)
+      })
+    }
+    
   }
 
 }
