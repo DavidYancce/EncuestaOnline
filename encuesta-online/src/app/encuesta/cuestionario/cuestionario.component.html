@@ -24,10 +24,35 @@
                     <li>Las personas suelen empezar diciendo: "Me considero una persona..."</li>
                     <li>Es muy importante que seas espontaneo y respondas con total sinceridad</li>
                 </ul>
+                
             </div>
             
             <textarea rows="20" cols="120" placeholder="Escriba aqui su autodescripcion" value="" style="display: block; margin-left: auto; margin-right: auto;"></textarea>
             
+        </mat-tab>
+        <mat-tab label="Como soy">
+            <div class="padre" style="display: flex">
+                <div style="width:20%">
+                    <div class="parrafo-titulo" style="margin-top: 20%;"> Intrucciones </div>
+                    <div class="parrafo">
+                        Marque solo las palabras que correspondan
+                    </div>
+                    <div class="parrafo">
+                        No exageres o trates de magnificar tus respuestas
+                    </div>
+                    <div class="parrafo">
+                        Si esto sucede, se invalidara el test y te pediremos que lo respondas otra vez
+                    </div>
+                    <button mat-raised-button color="primary" (click)="guardarComoSoy()">Enviar</button>
+                </div>
+                <div class="contenedor-palabras">
+                        <mat-selection-list [(ngModel)]="palabrasSeleccionadasComoSoy" multiple="true" style="display: flex; flex-wrap: wrap"> 
+                            <mat-list-option [value]="palabra.id_valor"  *ngFor="let palabra of palabrasComoSoy" style="width:25%">
+                                {{palabra.descripcion}}
+                            </mat-list-option>
+                        </mat-selection-list> 
+                </div>
+            </div>
         </mat-tab>
         <mat-tab label="La gente dice">
             <div class="padre" style="display: flex">
@@ -44,42 +69,12 @@
                     </div>
                 </div>
                 <div class="contenedor-palabras">
-                    
-                    <div style="width:25%" *ngFor="let palabra of palabras; let indice = index">
-                        
-                        <mat-selection-list #list  (selectionChange)="onGroupsChange(list.selectedOptions.selected)"> 
-                            <mat-list-option [value]="indice">
-                                {{palabra}}
-                            </mat-list-option>
-                        </mat-selection-list> 
-                    </div>
-                </div>
+                    <mat-selection-list [(ngModel)]="palabrasSeleccionadasDicenMi" multiple="true" style="display: flex; flex-wrap: wrap"> 
+                        <mat-list-option [value]="palabra.id_valor"  *ngFor="let palabra of palabrasDicenMi" style="width:25%">
+                            {{palabra.descripcion}}
+                        </mat-list-option>
+                    </mat-selection-list> 
             </div>
-        </mat-tab>
-        <mat-tab label="Realmente soy">
-            <div class="padre" style="display: flex">
-                <div style="width:20%">
-                    <div class="parrafo-titulo" style="margin-top: 20%;"> Intrucciones </div>
-                    <div class="parrafo">
-                        Marque solo las palabras que correspondan
-                    </div>
-                    <div class="parrafo">
-                        No exageres o trates de magnificar tus respuestas
-                    </div>
-                    <div class="parrafo">
-                        Si esto sucede, se invalidara el test y te pediremos que lo respondas otra vez
-                    </div>
-                </div>
-                <div class="contenedor-palabras">
-                    <div style="width:25%" *ngFor="let palabra of palabras; let indice = index">
-                        
-                        <mat-selection-list > 
-                            <mat-list-option >
-                                {{palabra}}
-                            </mat-list-option>
-                        </mat-selection-list> 
-                    </div>
-                </div>
             </div>
         </mat-tab>
     </mat-tab-group>
