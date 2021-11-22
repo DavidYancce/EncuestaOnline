@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { UsuarioService } from './api/services';
-import { Usuario } from './api/models';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +7,4 @@ import { Usuario } from './api/models';
 })
 export class AppComponent {
   title = 'encuesta-online';
-  public usuario: Usuario;
-  public constructor(private api:UsuarioService){
-    this.api.apiUsuarioRegistrarPost({usuario})
-  }
-}
+};
